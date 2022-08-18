@@ -1,9 +1,13 @@
-from tkinter import *
-from pytube import Youtube
+import time
 
-display = Tk()
-display.geometry('500 X 300')
-display.resizable(0, 0)
-display.title('YouTube Downloader')
+input("After you click enter, your typing speed will start being counted ")
+start = time.perf_counter()
+words = input("Start typing: ")
+end = time.perf_counter()
+tme = end - start
 
-display.mainloop()
+lit = words.split()
+abc = len(lit)
+speed = abc/tme * 60
+print(tme, '\t', abc, '\t', speed)
+# time.perf_counter()
